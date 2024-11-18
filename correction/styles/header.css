@@ -1,0 +1,39 @@
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header__logo > a {
+  font-size: 3.2rem;
+}
+
+.header__nav__list {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  list-style: none;
+}
+
+.header__nav__list__item > a {
+  font-size: 1.8rem;
+}
+
+.header__button_mobile {
+  display: none;
+  width: 2.8rem;
+  height: 2.8rem;
+}
+
+/* Idéalement on intégre en mobile first */
+/* On écrit le style mobile en premier puis on l'adapte aux desktop avec les medias queries */
+/* Ici on fait l'inverse, pas recommandé */
+@media screen and (max-width: 768px) {
+  .header__nav__list {
+    display: none;
+  }
+
+  .header__button_mobile {
+    display: flex;
+  }
+}
